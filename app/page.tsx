@@ -1,10 +1,13 @@
 import Image from "next/image";
+import { ScrollRow } from "@/components/scroll-row";
 import { projects } from "@/lib/content";
 
 export default function Home() {
   return (
     <main className="flex-1 flex flex-col md:justify-center">
-      <div className="flex flex-col gap-10 px-6 pt-6 pb-14 md:flex-row md:items-end md:gap-12 md:overflow-x-auto md:snap-x md:scroll-px-8 md:px-[max(2rem,calc((100vw-80rem)/2+2rem))] md:pt-2 md:pb-16 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <ScrollRow
+        buttonClassName="top-[calc(50%-4.5rem)]"
+        className="flex flex-col gap-10 px-6 pt-6 pb-14 md:flex-row md:items-end md:gap-12 md:overflow-x-auto md:snap-x md:scroll-px-8 md:px-[max(2rem,calc((100vw-80rem)/2+2rem))] md:pt-2 md:pb-16 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {projects.map((project, i) => (
           <article
             key={i}
@@ -22,7 +25,7 @@ export default function Home() {
                     height={project.image.height}
                     sizes="(min-width: 768px) 500px, 90vw"
                     loading={i === 0 ? "eager" : "lazy"}
-                    className="h-auto max-h-full w-auto max-w-full rounded-md shadow-xl shadow-black/10"
+                    className="h-auto max-h-full w-auto max-w-full rounded-md drop-shadow-xl"
                   />
                 </div>
               )}
@@ -40,7 +43,7 @@ export default function Home() {
             </div>
           </article>
         ))}
-      </div>
+      </ScrollRow>
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { ScrollRow } from "@/components/scroll-row";
 import {
   about,
   cameraRoll,
@@ -30,11 +31,11 @@ function List({ title, rows }: { title: string; rows: Row[] }) {
       {rows.map((row, i) => {
         const content = (
           <>
-            <span className="text-[15px] font-medium text-stone-900 dark:text-stone-100">
+            <span className="shrink-0 text-[15px] font-medium text-stone-900 dark:text-stone-100">
               {row.label}
               {row.href && <span className="ml-0.5 text-stone-400">↗</span>}
             </span>
-            <span className="shrink-0 text-sm text-stone-400 dark:text-stone-500">
+            <span className="text-right text-sm text-stone-400 dark:text-stone-500">
               {row.detail}
             </span>
           </>
@@ -68,37 +69,32 @@ export default function About() {
         <h1 className="max-w-4xl text-[1.55rem] font-medium leading-snug tracking-tight text-stone-900 sm:text-[1.85rem] lg:text-[2rem] dark:text-stone-100">
           {about.headline}
         </h1>
-        <div className="mt-8 max-w-2xl space-y-4 text-base leading-relaxed text-stone-500 dark:text-stone-400">
-          {about.bio.map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
-          ))}
-        </div>
       </section>
 
       <section className="mt-24 sm:mt-32">
         <div className="mx-auto mb-6 max-w-5xl px-6 sm:px-10">
           <Label>Camera roll</Label>
         </div>
-        <div className="flex gap-2 overflow-x-auto px-6 pb-2 [scrollbar-width:none] sm:px-[max(2.5rem,calc((100vw-64rem)/2+2.5rem))] [&::-webkit-scrollbar]:hidden">
-          {cameraRoll.map((photo, i) => (
-            <figure key={i} className="shrink-0">
-              <div className="relative h-44 w-64 overflow-hidden rounded-lg bg-stone-100 sm:h-56 sm:w-80 dark:bg-stone-900">
-                {photo.src && (
-                  <Image
-                    src={photo.src}
-                    alt={photo.caption}
-                    fill
-                    sizes="320px"
-                    className="object-cover"
-                  />
-                )}
-              </div>
-              <figcaption className="mt-2 text-xs text-stone-400 dark:text-stone-500">
+        <ScrollRow
+          className="flex gap-2 overflow-x-auto px-6 pb-2 [scrollbar-width:none] sm:px-[max(2.5rem,calc((100vw-64rem)/2+2.5rem))] [&::-webkit-scrollbar]:hidden"
+          buttonClassName="top-[calc(50%-1rem)]"
+        >
+          {cameraRoll.map((photo) => (
+            <figure key={photo.src} className="group shrink-0">
+              <Image
+                src={photo.src}
+                alt={photo.caption}
+                width={photo.width}
+                height={photo.height}
+                sizes="(min-width: 640px) 340px, 270px"
+                className="h-44 w-auto rounded-lg bg-stone-100 sm:h-56 dark:bg-stone-900"
+              />
+              <figcaption className="mt-2 whitespace-nowrap text-xs text-stone-400 opacity-0 transition-opacity duration-200 group-hover:opacity-100 dark:text-stone-500 [@media(hover:none)]:opacity-100">
                 {photo.caption}
               </figcaption>
             </figure>
           ))}
-        </div>
+        </ScrollRow>
       </section>
 
       <section className="mx-auto mt-20 max-w-5xl px-6 sm:mt-28 sm:px-10">
