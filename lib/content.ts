@@ -21,7 +21,8 @@ export const projects: Project[] = [
   {
     title: "Trainn",
     year: "Jun 2025",
-    summary: "PLACEHOLDER: one line on what Trainn is and who it's for.",
+    summary:
+      "A booking platform for drop-in sports, fitness, music, and art classes for kids and adults across the Bay Area and LA.",
     gradient: "from-sky-200 via-indigo-200 to-violet-300",
     image: { src: "/work/trainn.webp", width: 2000, height: 1055 },
   },
@@ -61,7 +62,13 @@ export const about = {
   contactLine: "PLACEHOLDER: Always happy to talk product, startups, or ___.",
 };
 
-export type Row = { label: string; detail: string; href?: string };
+export type Row = {
+  label: string;
+  detail: string;
+  href?: string;
+  // Optional image in /public with its pixel size, shown to the right on hover.
+  image?: { src: string; width: number; height: number };
+};
 
 export const career: Row[] = [
   { label: "Trainn", detail: "Founder · 2025 – Present" },
@@ -146,8 +153,10 @@ export const posts: Post[] = [
     summary: "PLACEHOLDER: one-line summary of the post.",
   },
   {
-    title: "PLACEHOLDER: Building with AI developer tools",
-    year: "2026",
-    summary: "PLACEHOLDER: one-line summary of the post.",
+    title: "Vibe Coding: Key Steps and Lessons Learned",
+    year: "2025",
+    summary:
+      "The five steps and seven lessons from building Trainn as a non-technical founder with AI coding tools.",
+    href: "/writing/vibe-coding-key-steps-and-lessons-learned",
   },
 ];
