@@ -3,13 +3,18 @@
 export const site = {
   name: "Sam Roth",
   tagline: "Operator, PM, Founder",
-  email: "sam@trainn.pro",
+  email: "samgroth@gmail.com",
+  socials: {
+    linkedin: "https://www.linkedin.com/in/samuelgroth/",
+    github: "https://github.com/sam-trainnpro",
+    instagram: "https://www.instagram.com/sgroth/",
+  },
 };
 
 export type Project = {
   title: string;
   company?: string;
-  year: string;
+  year?: string;
   summary: string;
   // Tailwind gradient classes for the card panel until a real image is added.
   gradient: string;
@@ -29,37 +34,38 @@ export const projects: Project[] = [
   {
     title: "Trainn: Promo Codes + Credits",
     year: "Sept 2025",
-    summary: "PLACEHOLDER: the problem, what you did, and the result.",
+    summary:
+      "Feature to offer admin or provider created promo codes and referral credits.",
     gradient: "from-amber-200 via-orange-200 to-rose-300",
     image: { src: "/work/trainn-promo-codes.webp", width: 675, height: 1439 },
   },
   {
-    title: "PLACEHOLDER project",
-    company: "Fenix",
-    year: "Year",
-    summary: "PLACEHOLDER: the problem, what you did, and the result.",
+    title: "Trainn: Subscription Service",
+    summary: "Built subscription packages.",
     gradient: "from-emerald-200 via-teal-200 to-cyan-300",
   },
   {
-    title: "PLACEHOLDER project",
-    company: "Clean Focus",
-    year: "Year",
-    summary: "PLACEHOLDER: the problem, what you did, and the result.",
+    title: "Personal: Practice Hard Conversations",
+    summary: "Have the conversation with AI before having it live.",
+    gradient: "from-fuchsia-200 via-pink-200 to-rose-300",
+  },
+  {
+    title: "Sunrun: New Market Analysis Tool",
+    summary: "A product to evaluate potential new markets by zip code.",
     gradient: "from-lime-200 via-emerald-200 to-teal-300",
   },
   {
-    title: "PLACEHOLDER side project",
-    company: "Side Project",
-    year: "Year",
-    summary: "PLACEHOLDER: something you built for fun.",
-    gradient: "from-fuchsia-200 via-pink-200 to-rose-300",
+    title: "Personal: Learn to Read",
+    summary: "A program to help my kids learn to read.",
+    gradient: "from-yellow-200 via-amber-200 to-orange-300",
   },
 ];
 
 export const about = {
   headline:
     "15 years chasing impact locally and globally. GM/operator turned PM turned Founder. Dad of two, longboard surfer, campfire guitarist.",
-  contactLine: "PLACEHOLDER: Always happy to talk product, startups, or ___.",
+  contactLine:
+    "Always happy to talk product, guitar songs, or beginner surf breaks.",
 };
 
 export type Row = {
@@ -86,7 +92,7 @@ export const cameraRoll: {
   width: number;
   height: number;
 }[] = [
-  { src: "/photos/01-dolores-park.jpg", caption: "Dolores Park, San Francisco", width: 1600, height: 1600 },
+  { src: "/photos/01-dolores-park.jpg", caption: "Dolores Park, San Francisco", width: 1495, height: 1486 },
   { src: "/photos/02-great-wall-china.jpg", caption: "Great Wall, China", width: 1600, height: 2134 },
   { src: "/photos/03-aspen-bowl.jpg", caption: "Aspen Bowl", width: 1600, height: 1200 },
   { src: "/photos/04-elephants-zambia.jpg", caption: "Elephants, Zambia", width: 1600, height: 1200 },

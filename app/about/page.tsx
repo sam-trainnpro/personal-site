@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ScrollRow } from "@/components/scroll-row";
+import { SocialLinks } from "@/components/social-links";
 import {
   about,
   cameraRoll,
@@ -132,6 +133,7 @@ export default function About() {
               →
             </span>
           </a>
+          <SocialLinks className="mt-8" />
         </div>
       </section>
     </main>
