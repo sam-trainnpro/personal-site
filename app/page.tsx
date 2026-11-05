@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <main className="flex-1 flex flex-col md:justify-center">
       <ScrollRow
-        buttonClassName="top-[calc(50%-4.5rem)]"
-        className="flex flex-col gap-10 px-6 pt-6 pb-14 md:flex-row md:items-end md:gap-12 md:overflow-x-auto md:snap-x md:scroll-px-8 md:px-[max(2rem,calc((100vw-80rem)/2+2rem))] md:pt-2 md:pb-16 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        buttonClassName="top-[calc(0.5rem+min(70vw,35rem)/3)]"
+        className="flex flex-col gap-10 px-6 pt-6 pb-14 md:flex-row md:items-start md:gap-12 md:overflow-x-auto md:snap-x md:scroll-px-8 md:px-[max(2rem,calc((100vw-80rem)/2+2rem))] md:pt-2 md:pb-16 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {projects.map((project, i) => (
           <article
             key={i}
