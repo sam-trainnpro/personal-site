@@ -41,8 +41,10 @@ export const projects: Project[] = [
   },
   {
     title: "Trainn: Subscription Service",
+    year: "Nov 2025",
     summary: "Built subscription packages.",
     gradient: "from-emerald-200 via-teal-200 to-cyan-300",
+    image: { src: "/work/trainn-subscription.webp", width: 1173, height: 540 },
   },
   {
     title: "Personal: Practice Hard Conversations",
@@ -113,50 +115,100 @@ export const personalLists: { title: string; rows: Row[] }[] = [
   {
     title: "Favorite reads",
     rows: [
-      { label: "The Hard Thing About Hard Things", detail: "Ben Horowitz" },
-      { label: "Escaping the Build Trap", detail: "Melissa Perri" },
-      { label: "The Power of Habit", detail: "Charles Duhigg" },
-      { label: "Ready Player One", detail: "Ernest Cline" },
-      { label: "Life", detail: "Keith Richards & James Fox" },
+      {
+        label: "The Hard Thing About Hard Things",
+        detail: "Ben Horowitz",
+        image: { src: "/about/hard-thing-about-hard-things.webp", width: 301, height: 500 },
+      },
+      {
+        label: "Escaping the Build Trap",
+        detail: "Melissa Perri",
+        image: { src: "/about/escaping-the-build-trap.webp", width: 333, height: 500 },
+      },
+      {
+        label: "The Power of Habit",
+        detail: "Charles Duhigg",
+        image: { src: "/about/power-of-habit.webp", width: 300, height: 457 },
+      },
+      {
+        label: "Ready Player One",
+        detail: "Ernest Cline",
+        image: { src: "/about/ready-player-one.webp", width: 500, height: 771 },
+      },
+      {
+        label: "Life",
+        detail: "Keith Richards & James Fox",
+        image: { src: "/about/life-keith-richards.webp", width: 326, height: 500 },
+      },
     ],
   },
   {
     title: "On repeat",
     rows: [
-      { label: "Know No Better", detail: "Major Lazer · 2017" },
-      { label: "Forty Licks", detail: "The Rolling Stones · 2002" },
-      { label: "Bang Bang", detail: "Dispatch · 1997" },
+      {
+        label: "Know No Better",
+        detail: "Major Lazer · 2017",
+        image: { src: "/about/know-no-better.webp", width: 500, height: 500 },
+      },
+      {
+        label: "Forty Licks",
+        detail: "The Rolling Stones · 2002",
+        image: { src: "/about/forty-licks.webp", width: 500, height: 500 },
+      },
+      {
+        label: "Bang Bang",
+        detail: "Dispatch · 1997",
+        image: { src: "/about/bang-bang.webp", width: 500, height: 500 },
+      },
     ],
   },
   {
     title: "Life",
     rows: [
-      // TODO: show a family photo with this row once it's added.
-      { label: "The fam", detail: "SF, CA" },
+      {
+        label: "The fam",
+        detail: "SF, CA",
+        image: { src: "/about/family.webp", width: 800, height: 988 },
+      },
       {
         label: "Workout classes",
         detail: "Barry's, City is Our Gym, Asta Yoga, Body Rok",
+        image: { src: "/about/workout.webp", width: 800, height: 1067 },
       },
-      { label: "Open mic concerts", detail: "Backyard" },
-      { label: "Let's go Warriors", detail: "End of an era" },
-      { label: "Steak connoisseur", detail: "Soy sauce marinade" },
-      { label: "Tea over coffee", detail: "Most mornings" },
+      {
+        label: "Open mic concerts",
+        detail: "Backyard",
+        image: { src: "/about/open-mic.webp", width: 800, height: 600 },
+      },
+      {
+        label: "Let's go Warriors",
+        detail: "End of an era",
+        image: { src: "/about/warriors.webp", width: 800, height: 1067 },
+      },
+      {
+        label: "Steak connoisseur",
+        detail: "Soy sauce marinade",
+        image: { src: "/about/steak.webp", width: 800, height: 1067 },
+      },
+      {
+        label: "Tea over coffee",
+        detail: "Most mornings",
+        image: { src: "/about/tea.webp", width: 800, height: 1067 },
+      },
     ],
   },
 ];
 
-export type Post = { title: string; year: string; summary: string; href?: string };
+export type Post = { title: string; year: string; summary?: string; href?: string };
 
 export const posts: Post[] = [
   {
-    title: "PLACEHOLDER: From ops and finance to product",
+    title: "Coming Soon: From ops and finance to product",
     year: "2026",
-    summary: "PLACEHOLDER: one-line summary of the post.",
   },
   {
-    title: "PLACEHOLDER: What I learned building Trainn",
+    title: "Coming Soon: What I learned building Trainn",
     year: "2026",
-    summary: "PLACEHOLDER: one-line summary of the post.",
   },
   {
     title: "Vibe Coding: Key Steps and Lessons Learned",
