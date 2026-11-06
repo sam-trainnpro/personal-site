@@ -36,9 +36,11 @@ export default function Writing() {
                     {post.year}
                   </span>
                 </p>
-                <p className="mt-1.5 text-[15px] text-stone-400 dark:text-stone-500">
-                  {post.summary}
-                </p>
+                {post.summary && (
+                  <p className="mt-1.5 text-[15px] text-stone-400 dark:text-stone-500">
+                    {post.summary}
+                  </p>
+                )}
               </li>
             );
           })}

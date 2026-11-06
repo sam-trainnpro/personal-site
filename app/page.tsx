@@ -29,6 +29,13 @@ export default function Home() {
                   />
                 </div>
               )}
+              {!project.image && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="rounded-full bg-white/80 px-4 py-1.5 text-sm font-medium text-stone-700 shadow-sm backdrop-blur-sm dark:bg-stone-900/70 dark:text-stone-200">
+                    Coming soon
+                  </span>
+                </div>
+              )}
             </div>
             <div className="mt-3">
               <h2 className="text-base font-medium text-stone-900 dark:text-stone-100">
